@@ -29,7 +29,11 @@ class ExampleTest extends DuskTestCase
                     ->type('pwd', '1')
                     ->press('submit')
                     ->assertPathIs('/')
-                    ->assertSee('asdsa')
+                    ->assertSee('1')
+                    ->clickLink('Page 1')
+                    ->assertSee('About')
+                    ->clickLink('About')
+                    ->assertTitle('127.0.0.1:8000/about')
                     ->resize(1100, 2400)->driver->takeScreenshot();
 
 

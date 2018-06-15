@@ -1,7 +1,6 @@
 @section('title','welcome')
-@extends('layout.app');
+@extends('layout.app')
 @section('name','welcome')
-
 @section('body')
     @foreach($data as $data1)
         <h3 class="modal-body"><span class="label label-primary">
